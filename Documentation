@@ -1,0 +1,27 @@
+
+conventional method to find the factorial of a number is
+-> we have to product either from two extremes and proceed in increment or decrement order respectively
+->so, number of pairs needed to be multiplied is (n-1) where n is the number of whose factorial we
+need to find 
+
+new efficient methods would be like this
+->first we can prime factorised each number right from 1 to n
+->and accumulate the like prime factors each product them 
+->and then we are left with less number of pairs which need to be multiplied
+
+example:- n = 10 
+first method:- 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1
+so, here we have 9 pairs to deal with
+
+
+second method:- 2*5  3*3  2*2*2  7  2*3  5  2*2  3  2
+                so, by accumulation we have
+                2*2*2*2*2*2*2*2   3*3*3*3   5*5   7
+                256 * 81  * 25  * 7    
+so, here we have to multiply only three pairs to get the result
+
+
+hence, the algorithm that we have design which takes two numbers as  input and 
+give there product as a output will run recursively less number of time than the conventinal 
+method
+
